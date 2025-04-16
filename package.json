@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/leonard01/realtime_messaging_system_rabbitmq#readme",
   "dependencies": {
-    "amqplib": "^0.10.7"
+    "amqplib": "^0.10.7",
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
   }
 }

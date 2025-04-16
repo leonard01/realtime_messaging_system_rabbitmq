@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Real-Time Notifications</title>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <h1>Real-Time Notifications Dashboard</h1>
+  <ul id="notifications"></ul>
+
+  <script>
+    // Connect to the Socket.IO server
+    const socket = io();
+
+    // Listen for notifications from the server
+    socket.on('notification', (data) => {
+      const li = document.createElement('li');
+      li.textContent = `${data.timestamp} - ${data.text}`;
+      document.getElementById('notifications').appendChild(li);
+    });
+  </script>
+</body>
+</html>
